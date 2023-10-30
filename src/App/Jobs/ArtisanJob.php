@@ -52,6 +52,5 @@ class ArtisanJob implements ShouldQueue
             $artisanAsJob->artisan_status = ArtisanAsJob::STATUS_FAIL;
             $artisanAsJob->save();
         }
-
     }
 }
