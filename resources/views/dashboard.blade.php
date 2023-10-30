@@ -22,7 +22,7 @@
                 @foreach ($artisanQueue as $artisan)
                     <tr>
                         <td>
-                            @if($artisan->artisan_output)
+                            @if ($artisan->artisan_output)
                                 <details>
                                     <summary>{{ $artisan->artisan_cmd }}</summary>
                                     {{ $artisan->artisan_output }}
@@ -38,10 +38,10 @@
                             {{ $artisan->artisan_status }}
                         </td>
                         <td style="text-align: right;">
-                            @if($artisan->created_at)
+                            @if ($artisan->created_at)
                                 {{ $artisan->created_at->isoFormat('LLLL') }}
                             @endif
-                            @if($artisan->job)
+                            @if ($artisan->job)
                                 <br>  {{ $artisan->job->available_at->isoFormat('LLLL') }}
                             @endif
                         </td>
@@ -56,7 +56,7 @@
         <div class="card">
             <div class="card-header">First Job Queue ID</div>
             <div class="card-body">
-                @if($startQueue)
+                @if ($startQueue)
                     {{ $startQueue->id }}
                 @endif
             </div>
